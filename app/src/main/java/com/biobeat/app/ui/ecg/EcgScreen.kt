@@ -28,7 +28,7 @@ fun EcgScreen(
     onBack: () -> Unit,
     viewModel: EcgViewModel = hiltViewModel(),
 ) {
-    val waveform by viewModel.waveformBuffer.collectAsStateWithLifecycle()
+    val waveformState by viewModel.waveformState.collectAsStateWithLifecycle()
     val isRecording by viewModel.isRecording.collectAsStateWithLifecycle()
 
     Scaffold(
@@ -58,7 +58,7 @@ fun EcgScreen(
             }
 
             EcgWaveformCanvas(
-                waveformData = waveform,
+                waveformState = waveformState,
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f)
