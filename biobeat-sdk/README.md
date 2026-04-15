@@ -283,7 +283,7 @@ The SDK declares the following permissions in its manifest (merged automatically
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
-Your app is responsible for requesting these permissions at runtime before calling `scan()` or `connect()`.
+**Your app is responsible for requesting these permissions at runtime before calling `scan()` or `connect()`.**
 
 ## Threading Model
 
